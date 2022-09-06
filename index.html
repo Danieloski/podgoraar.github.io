@@ -1,10 +1,16 @@
 <!DOCTYPE html>
     <head>
-        <title>Podgora AR</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatibile" content="IE=edge">
+        <title>Podgora AR demo</title>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
         <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     </head>
     <body>
         <h1>Hello</h1>
+        <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+            <a-camera gps-camera rotation-renderer></a-camera>
+            <a-entity gltf-model="./media/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 45.944661; latitude: 13.597003;" animation-mixer/>
+        </a-scene>
     </body>
 </html>
