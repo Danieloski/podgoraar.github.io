@@ -9,10 +9,10 @@
     </head>
 
     <body style="margin: 0; overflow: hidden;">
-        <a-scene gps-camera-debug vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+        <a-scene vr-mode-ui="enabled: false" arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;" renderer="antialias: true; alpha: true">
+            <a-camera gps-projected-camera rotation-reader></a-camera>
             <!--<a-text value="CIAO" look-at="[gps-camera]" scale="50 50 50" gps-entity-place="latitude: 45.944661; longitude: 13.597003;"></a-text>-->
-            <a-entity gltf-model="./media/magnemite/scene.gltf" rotation="0 180 0" scale="0.30 0.30 0.30" gps-entity-place="longitude: 45.944661; latitude: 13.597003;" animation-mixer/></a-entity>
-            <a-camera gps-camera rotation-reader positionMinAccuracy="1"></a-camera>
+            <a-entity gltf-model="./media/magnemite/scene.gltf" rotation="0 180 0" scale="0.30 0.30 0.30" gps-projected-entity-place="latitude: 13.597003; longitude: 45.944661;" animation-mixer/></a-entity>
         </a-scene>
     </body>
 </html>
