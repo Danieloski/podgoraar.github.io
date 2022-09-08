@@ -10,11 +10,11 @@
 
     <body>
         <a-scene
-            vr-mode-ui="enabled: false"
+            vr-mode-ui="enabled: false" embedded
             arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
             renderer='antialias: true; alpha: true'>
             <a-camera gps-projected-camera rotation-reader></a-camera>
-            <a-box gps-projected-entity-place='latitude: 45.944636; longitude: 13.597005' material='color: red' scale='10 10 10'></a-box>
+            <a-box gps-projected-entity-place='latitude: 45.944636; longitude: 13.597005' material='color: red' scale='2 2 2'></a-box>
         </a-scene>
 
 
